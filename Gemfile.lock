@@ -4,7 +4,6 @@ GEM
     daemons (1.1.9)
     eventmachine (1.0.0)
     json (1.7.5)
-    newrelic_rpm (3.5.3.25)
     rack (1.4.1)
     sinatra (1.1.0)
       rack (~> 1.1)
@@ -20,6 +19,5 @@ PLATFORMS
 
 DEPENDENCIES
   json
-  newrelic_rpm
   sinatra
   thin
