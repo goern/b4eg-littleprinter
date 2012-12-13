@@ -24,6 +24,9 @@ greetings = {"english" => ["Good morning", "Hello", "Good evening"],
 # HTML/CSS edition with etag. This publication changes the greeting depending on the time of day. It is using UTC to determine the greeting.
 #
 get '/edition/' do
+  if params['test'].eql? 'true'
+    return 200
+  end
   return 400, 'Error: No local_delivery_time was provided' if params['local_delivery_time'].nil?
   return 400, 'Error: No lang was provided' if params['lang'].nil?
   return 400, 'Error: No name was provided' if params['name'].nil?
