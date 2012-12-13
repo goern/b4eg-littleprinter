@@ -127,3 +127,7 @@ post '/validate_config/' do
   content_type :json
   response.to_json
 end
+
+get '/meta.json' do
+  erb :meta_json
+end
