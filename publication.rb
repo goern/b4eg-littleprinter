@@ -75,7 +75,7 @@ get '/sample/' do
   @greeting = "#{greetings[language][0]}, #{name}"
   # Set the etag to be this content
   etag Digest::MD5.hexdigest(language+name)
-  erb :hello_world
+  erb :edition
 end
 
 
