@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hot News</title>
+	<style type="text/css">
+	body {
+		font:20px 'Quicksand', sans-serif;
+		color:#000;
+		background-color:#fff;
+		width:384px;
+		padding-bottom: 20px;
+		margin:0px;
+	}
+
+	div.header {
+		padding-bottom: 0;
+	}
+
+	div.item {
+		padding-bottom: 20px;
+		border-bottom:4px dashed #000;
+		margin-bottom: 0;
+	}
+	</style>
+</head>
+
+<body>
+	<div class="header">Hey <%= @greeting %>, News for you!</div>
+
+	<div class="item">
+		<h2>Kitten Lands On Anger</h2>
+		<img class="dither"  src="https://s3.amazonaws.com/images.m2i.stamen.com/toner_i_mVdGOcvN4.png" />
+
+		<p><small>posted on 2012-12-13</small></p>
+	</div>
+</body>
+
+</html>

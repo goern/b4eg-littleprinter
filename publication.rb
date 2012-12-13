@@ -35,7 +35,7 @@ get '/edition/' do
   
   # Extract configuration provided by user through BERG Cloud. These options are defined by the JSON in meta.json.
   language = params['lang'];
-  name = params['name'];
+  @name = params['name'];
   
   # Pick a time of day appropriate greeting
   i = 1
@@ -52,12 +52,12 @@ get '/edition/' do
   # Set the etag to be this content. This means the user will not get the same content twice, 
   # but if they reset their subscription (with, say, a different language they will get new content 
   # if they also set their subscription to be in the future)
-  etag Digest::MD5.hexdigest(language+name+date.strftime('%d%m%Y'))
+  etag Digest::MD5.hexdigest(language+@name+date.strftime('%d%m%Y'))
   
   # Build this edition.
-  @greeting = "#{greetings[language][i]}, #{name}"
+  @greeting = "#{greetings[language][i]}, #{@name}"
   
-  erb :hello_world
+  erb :edition
 end
 
 
