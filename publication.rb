@@ -25,6 +25,7 @@ greetings = {"english" => ["Good morning", "Hello", "Good evening"],
 #
 get '/edition/' do
   if params['test'].eql? 'true'
+    etag Digest::MD5.hexdigest('test'+Time.new.strftime('%d%m%Y'))
     return 200
   end
   return 400, 'Error: No local_delivery_time was provided' if params['local_delivery_time'].nil?
