@@ -128,6 +128,6 @@ post '/validate_config/' do
   response.to_json
 end
 
-get '/meta.json' do
-  erb :meta_json
+post '/handle_push' do
+  "thanks."
 end
