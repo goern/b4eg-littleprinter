@@ -129,5 +129,7 @@ post '/validate_config/' do
 end
 
 post '/handle_push' do
+  puts JSON.parse request.body.read
+  
   "thanks."
 end
