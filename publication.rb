@@ -129,7 +129,11 @@ post '/validate_config/' do
 end
 
 post '/handle_push' do
-  puts JSON.parse request.body.read
+  if params[:checkin].nil?
+    puts "testing or what?"
+  end
+  
+  puts request.body.read
   
   "thanks."
 end
