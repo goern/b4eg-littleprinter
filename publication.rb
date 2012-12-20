@@ -145,3 +145,10 @@ greetings = {"english" => ["Good morning", "Hello", "Good evening"],
 
     '{"response": "200 thanks.", "code": 200}'
   end
+
+  get '/callback' do
+    return 400, 'Error: back from a OAuth2 and no code?!' if params['code'].nil?
+    
+    return 200, "I lost my brain in El Segundo"
+
+  end
